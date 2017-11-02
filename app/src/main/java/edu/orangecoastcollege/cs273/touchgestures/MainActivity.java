@@ -150,13 +150,13 @@ public class MainActivity extends AppCompatActivity
      * Similar to scroll, with faster velocity and user let releases contact with device.
      * @param motionEvent
      * @param motionEvent1
-     * @param v Initial velocity (pixels/second)
-     * @param v1 Terminal velocity (pixels/second)
+     * @param v Velocity in x-direction(pixels/second)
+     * @param v1 Velocity in y-direction(pixels/second)
      * @return
      */
     @Override
     public boolean onFling(MotionEvent motionEvent, MotionEvent motionEvent1, float v, float v1) {
-        gesturesLogTextView.append("\nFling gesture occurred, initial V = " + v + ", terminal V = " + v1);
+        gesturesLogTextView.append("\nFling gesture occurred, velocityX = " + v + ", velocityY = " + v1);
         flingTextView.setText(String.valueOf(++flings));
         return true;
     }
